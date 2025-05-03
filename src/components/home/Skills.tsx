@@ -1,13 +1,75 @@
-import Image from 'next/image'
-import SkillCard from './SkillCard'
+import html from "../../../public/skills/html5-original 1.png";
+import css from "@/../public/skills/css3-original 1.png";
+import js from "@/../public/skills/javascript-original 1.png";
+import react from "@/../public/skills/react-original 1.png";
+import redux from "@/../public/skills/redux-original 1.png";
+import nextJs from "@/../public/skills/nextjs-original 1.png";
+import nodeJs from "@/../public/skills/nodejs-original 1.png";
+import ts from "@/../public/skills/typescript-original 2.png";
+import Image from "next/image";
+
+const skills = [
+  {
+    title: "HTML5",
+    image: html,
+  },
+  {
+    title: "CSS",
+    image: css,
+  },
+  {
+    title: "JavaScript",
+    image: js,
+  },
+  {
+    title: "React",
+    image: react,
+  },
+  {
+    title: "Redux",
+    image: redux,
+  },
+  {
+    title: "NextJs",
+    image: nextJs,
+  },
+  {
+    title: "NodeJs",
+    image: nodeJs,
+  },
+  {
+    title: "TypeScript",
+    image: ts,
+  },
+  // {
+  //   title: "MongoDb",
+  //   image: '',
+  // },
+  // {
+  //   title: "Mongoose",
+  //   image: '',
+  // },
+];
 
 export default function Skills() {
-    return (
-        <div className='bg-[#0d1224] p-10 flex gap-10'>
-            <SkillCard />
-            <SkillCard />
-            <SkillCard />
-            <SkillCard />
-        </div>
-    )
+  return (
+    <div className="bg-[#161616] p-10">
+      <h2 className="text-3xl font-bold text-[#70FF00] mb-4">Skills()</h2>
+      <div className="flex flex-wrap gap-10 my-5">
+        {skills.map((skill) => (
+          <div key={skill.title} className="flex flex-col items-center">
+            <Image
+              src={skill.image}
+              alt={skill.title}
+              width={60}
+              height={60}
+              title={skill.title}
+              priority
+            />
+            <span className="text-white text-sm mt-2">{skill.title}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
