@@ -1,10 +1,11 @@
+import Image from "next/image";
 import { MdDownload } from "react-icons/md";
 
 export default function Banner() {
   return (
     <div>
       <div
-        className="hero flex justify-between md:px-12 px-10 py-5 place-items-start items-center min-h-screen"
+        className="hero flex justify-between md:px-12 px-10 py-5 place-items-start items-center min-h-screen mt-[2px]"
         style={{
           background:
             "linear-gradient(to right, #000000 0%, #272727 50%, #494949 100%)",
@@ -33,7 +34,7 @@ export default function Banner() {
               responsive and dynamic web applications using React, Next.js, and
               modern technologies like Tailwind CSS, TypeScript, and MongoDB.
               With a solid foundation in HTML, CSS, and JavaScript, I enjoy
-              transforming ideas into engaging digital experiences. Let’s create
+              transforming ideas into engaging digital experiences. Let&apos;s create
               something amazing together!
             </p>
 
@@ -47,15 +48,17 @@ export default function Banner() {
                 <span className="bottom"></span>
               </a>
               <button className="btn font-normal bg-transparent text-white border-2">
-                Let's Talk
+                Let&apos;s Talk
               </button>
             </div>
           </div>
         </div>
 
         <div>
-          <img
+          <Image
             src="/profileImg.png"
+            width={500}
+            height={500}
             alt=""
             className="hidden lg:block max-w-sm rounded-lg"
           />

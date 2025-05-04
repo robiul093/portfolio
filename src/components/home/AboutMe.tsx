@@ -33,12 +33,12 @@ export default function AboutMe() {
 
             {/* Brief Introduction */}
             <p className="text-[#F2F2F2] mb-6 text-justify text-lg">
-              I'm Robiul Hasan, currently a 4th-year student pursuing a BSc
+              I&apos;m Robiul Hasan, currently a 4th-year student pursuing a BSc
               Honors in Mathematics at the National University. My passion for
               problem-solving led me to front-end development, where I enjoy
               creating interactive and responsive web applications using React.
               With a blend of analytical skills from my mathematics background
-              and creativity in coding, I'm always eager to learn and grow as a
+              and creativity in coding, I&apos;m always eager to learn and grow as a
               developer. I aim to build user-friendly digital experiences that
               make a difference.
             </p>
@@ -82,10 +82,10 @@ export default function AboutMe() {
 
             {/* Personal Touch */}
             <p className="text-gray-300 italic">
-              "Coding for me is not just about building websites; it's about
+            &ldquo;Coding for me is not just about building websites; it&apos;s about
               solving real-world problems and creating seamless digital
               experiences. I thrive on challenges and am constantly looking for
-              opportunities to learn new technologies and improve my craft."
+              opportunities to learn new technologies and improve my craft.&rdquo;
             </p>
           </div>
         </div>
