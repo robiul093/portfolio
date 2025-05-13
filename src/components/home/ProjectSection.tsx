@@ -3,9 +3,6 @@ import {
   FaExternalLinkAlt,
   FaGithub,
 } from "react-icons/fa";
-import surveyHub from "@/../public/surveyHub.png";
-import portfolio from "@/../public/surveyHub.png";
-import upCycleImage from "@/../public/upCycle.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,7 +20,7 @@ const projects = [
       "JWT",
       "bcrypt",
     ],
-    image: upCycleImage, // make sure to import or define `upCycleImage` at the top
+    image: 'https://i.postimg.cc/FsnThrsq/Screenshot-2025-05-10-213336.png',
     demoLink: "https://up-cycle-client.vercel.app/",
     codeLink: "https://github.com/robiul093/secondhand-marketplace-client",
   },
@@ -33,20 +30,38 @@ const projects = [
     description:
       "A dynamic survey platform where users can create, vote, and comment on surveys. Built with React, Tailwind CSS, Firebase, and Stripe.",
     technologies: ["React", "Tailwind CSS", "Firebase", "Stripe"],
-    image: surveyHub,
+    image: "https://i.postimg.cc/YCGb95vS/Screenshot-2025-05-13-185143.png",
     demoLink: "https://assignment-12-33727.web.app/",
     codeLink: "https://github.com/robiul093/assignment-12-client",
   },
   {
     id: 3,
-    title: "Portfolio Website",
+    title: "Car Store",
     description:
-      "A personal portfolio website to showcase my projects and skills, developed using React and Tailwind CSS.",
-    technologies: ["React", "Tailwind CSS"],
-    image: portfolio,
-    demoLink: "https://portfolio-robiul.netlify.app/",
-    codeLink: "https://github.com/robiul093/portfolio",
+      "A full-stack car marketplace web application with role-based authentication and a secure payment system. Admins can manage listings, and users can browse and purchase vehicles.",
+    technologies: [
+      "React",
+      "Express.js",
+      "Mongoose",
+      "MongoDB",
+      "DaisyUI",
+      "JWT",
+      "Surjo Pay",
+    ],
+    image: "https://i.postimg.cc/13kMNvFr/Screenshot-2025-05-13-184703.png",
+    demoLink: "https://car-store-clint.vercel.app/", 
+    codeLink: "https://github.com/robiul093/car-store",
   },
+  // {
+  //   id: 4,
+  //   title: "Portfolio Website",
+  //   description:
+  //     "A personal portfolio website to showcase my projects and skills, developed using React and Tailwind CSS.",
+  //   technologies: ["React", "Tailwind CSS"],
+  //   image: portfolio,
+  //   demoLink: "https://portfolio-robiul.netlify.app/",
+  //   codeLink: "https://github.com/robiul093/portfolio",
+  // },
   // Add more projects as needed
 ];
 
@@ -57,7 +72,7 @@ export default function ProjectSection() {
         background:
           "linear-gradient(to right, #000000 0%, #272727 50%, #494949 100%)",
       }}
-      className="px-6 md:px-12 py-10"
+      className="md:px-12 px-8 py-10"
     >
       <div className="flex justify-between items-center">
         <h2 className="text-3xl font-bold text-[#70FF00] mb-4">Projects()</h2>
@@ -71,6 +86,7 @@ export default function ProjectSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
         {projects.map((project, index) => (
           <div
+          data-aos="zoom-out-right"
             key={index}
             className="bg-gray-100 rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300"
           >
@@ -80,6 +96,7 @@ export default function ProjectSection() {
                 alt={project?.title}
                 width={100}
                 height={100}
+                unoptimized
                 className="w-full h-36 object-cover rounded-lg mb-4"
               />
               <h3 className="text-xl font-semibold text-gray-800 mb-2">

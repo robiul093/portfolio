@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { LuLogIn } from "react-icons/lu";
 
 export default function NavbarPage() {
   const links = [
@@ -13,15 +14,15 @@ export default function NavbarPage() {
     },
     {
       name: "About",
-      path: "/about",
+      path: "/#about",
     },
     {
       name: "Blog",
-      path: "/blog",
+      path: "/#blog",
     },
     {
       name: "Contact",
-      path: "/contsct",
+      path: "/#contact",
     },
   ];
 
@@ -32,10 +33,10 @@ export default function NavbarPage() {
           "linear-gradient(to right, #000000 0%, #272727 50%, #494949 100%)",
       }}
     >
-      <div className="navbar bg-[252734] text-white md:px-12 px-4 py-4">
+      <div className="navbar bg-[252734] text-white py-4 md:px-12 px-8">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden pl-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -66,7 +67,7 @@ export default function NavbarPage() {
               ))}
             </ul>
           </div>
-          <a className="btn btn-ghost text-3xl text-gray-300 gap-0">
+          <a className="btn btn-ghost text-3xl text-gray-300 gap-0 p-0">
             Robiul<span className="text-gray-500">Hasan</span>
           </a>
         </div>
@@ -84,8 +85,8 @@ export default function NavbarPage() {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link href={"/login"} className="btn">
-            Login
+          <Link href={"/login"} className="p-2 cursor-pointer">
+            <LuLogIn/>
           </Link>
         </div>
       </div>
