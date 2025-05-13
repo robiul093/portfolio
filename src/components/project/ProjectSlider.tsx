@@ -56,6 +56,7 @@ export default function ProjectSlider({ images, totalSliderImage }: Props) {
                 alt={`Slide ${index + 1}`}
                 fill
                 className="object-fill"
+                unoptimized
                 onError={handleImageError}
               />
             </div>
